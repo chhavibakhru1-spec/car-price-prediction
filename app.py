@@ -1,15 +1,12 @@
 import streamlit as st
-import streamlit as st
+
 import sys
+import subprocess
 
-st.write("Python version:", sys.version)
+subprocess.check_call([sys.executable, "-m", "pip", "install", "joblib==1.4.2"])
 
-try:
-    import joblib
-    st.write("Joblib is installed:", joblib.__version__)
-except ModuleNotFoundError as e:
-    st.error(f"Joblib import failed: {e}")
-
+import joblib
+import pandas as pd
 import pandas as pd
 
 
