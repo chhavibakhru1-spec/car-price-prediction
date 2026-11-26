@@ -1,6 +1,17 @@
 import streamlit as st
+import streamlit as st
+import sys
+
+st.write("Python version:", sys.version)
+
+try:
+    import joblib
+    st.write("Joblib is installed:", joblib.__version__)
+except ModuleNotFoundError as e:
+    st.error(f"Joblib import failed: {e}")
+
 import pandas as pd
-import joblib
+
 
 # -------------------------------
 # Load trained model
