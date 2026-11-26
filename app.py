@@ -1,4 +1,3 @@
-```python
 import streamlit as st
 import pandas as pd
 import joblib
@@ -154,4 +153,4 @@ if st.button("Predict Car Price", use_container_width=True):
         st.caption(
             "This is a machine learning estimate and not an actual market quotation."
         )
-```
+
