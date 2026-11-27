@@ -24,7 +24,7 @@ st.set_page_config(
 # -------------------------------
 # Application UI
 # -------------------------------
-st.title("🚗 Used Car Price Predictor")
+st.title(" Used Car Price Predictor")
 
 st.markdown(
     """
