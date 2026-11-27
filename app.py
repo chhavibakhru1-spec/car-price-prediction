@@ -1,31 +1,5 @@
 import streamlit as st
-
-import importlib.metadata as md
-
-st.title("Deployment Check")
-
-st.write("Checking installed packages...")
-
-try:
-    st.write("Joblib version:", md.version("joblib"))
-except Exception as e:
-    st.error(f"Joblib package not found: {e}")
-
-try:
-    import joblib
-    st.success(f"Joblib import works! Version: {joblib.__version__}")
-except Exception as e:
-    st.error(f"Import failed: {e}")
-
-st.subheader("Installed packages")
-
-packages = sorted(
-    [f"{d.metadata['Name']}=={d.version}" for d in md.distributions()]
-)
-
-st.code("\n".join(packages))
-
-
+import joblib
 import pandas as pd
 
 
